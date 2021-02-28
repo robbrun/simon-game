@@ -25,8 +25,6 @@ $(document).ready(() => {
   function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] == userClickedPattern[currentLevel]) {
       console.log("success");
-      console.log(gamePattern);
-      console.log(userClickedPattern);
       if (userClickedPattern.length === gamePattern.length) {
         setTimeout(function () {
           nextSequence();
@@ -34,8 +32,6 @@ $(document).ready(() => {
       }
     } else {
       console.log("wrong");
-      console.log(gamePattern);
-      console.log(userClickedPattern);
       playSound("wrong");
       gameOver();
     }
